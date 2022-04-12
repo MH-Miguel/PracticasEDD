@@ -5,7 +5,7 @@ import java.util.Iterator;
 * @author Martínez Herrera Miguel Agustín
 * @version 1.1
 */
-public class List<T> implements TDAList<T>{
+public class Lista<T> implements Collection<T>{
 
     private Node head;
     private int size;
@@ -166,7 +166,7 @@ public class List<T> implements TDAList<T>{
      * @return una nueva lista con la mitad de los elementos.
      */
     @Override
-    public TDAList cut(boolean side) {
+    public Collection cut(boolean side) {
         return null;
     }
 

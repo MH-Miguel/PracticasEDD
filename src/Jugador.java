@@ -7,7 +7,7 @@
 
 public class Jugador {
     protected String nombre;
-    protected List<Carta> mano;
+    protected Lista<Carta> mano;
     protected boolean persona;
     public int puntuacion;
 
@@ -19,7 +19,7 @@ public class Jugador {
      */
     public Jugador(String nombre, boolean persona, int puntuacion) {
        this.nombre = nombre;
-       mano = new List<>();
+       mano = new Lista<>();
        this.persona = persona;
        this.puntuacion=puntuacion;
     }
@@ -45,7 +45,7 @@ public class Jugador {
       * Metodo que regresa la mano del jugador
       * @return mano del jugador
       */
-    public List<Carta> getMano() {
+    public Lista<Carta> getMano() {
          return mano;
      }
 

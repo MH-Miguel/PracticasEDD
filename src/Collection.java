@@ -6,7 +6,7 @@ import java.util.Iterator;
 * @version 3.0 Octubre 2021.
 * @since Estructuras de datos 2022-1. Prática 2.
 */
-public interface TDAList<T>{
+public interface Collection<T>{
 
 	/**
 	 * Inserta un nuevo elemento <i>e</i> en la posición <i>i</i>.
@@ -67,7 +67,7 @@ public interface TDAList<T>{
 	 * false - mitad izquierda.
 	 * @return una nueva lista con la mitad de los elementos.
 	 */
-	public TDAList cut(boolean side);
+	public Collection cut(boolean side);
 
 	/**
 	 * Da una cadena con los elementos contenidos en la lista.

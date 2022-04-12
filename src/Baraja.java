@@ -6,13 +6,13 @@
  */
 public class Baraja{
 
-    protected List<Carta> lista;
+    protected Lista<Carta> lista;
 
     /**
      * Constructor por omisión que crea una lista con 60 cartas
      */
     public Baraja(){
-        lista = new List();
+        lista = new Lista();
         for(int i=1; i<=13; i++){
             lista.add(0,(new Carta(i,"amarillo")));
             lista.add(0,(new Carta(i,"rojo")));
@@ -69,7 +69,7 @@ public class Baraja{
      * Método para quitar una carta de la baraja
      * @param i - Indice de la carta que quitaremos
      */
-    public void remove(int i){
+    public void delete(int i){
         lista.remove(i);
     }
 

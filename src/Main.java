@@ -14,7 +14,7 @@ public class Main{
 	    // Reset
 	    String reset="\u001B[0m";
 
-		List<Jugador> jugadorList = new List<>();
+		Lista<Jugador> jugadorList = new Lista<>();
 		Baraja baraja = new Baraja();
 		Scanner scanner = new Scanner(System.in);
 		String historial;
@@ -65,7 +65,7 @@ public class Main{
         }
 
 
-		Wizard wizard = new Wizard(jugadorList, baraja, numRondas);
+		//Wizard wizard = new Wizard(jugadorList, baraja, numRondas);
 
 
 

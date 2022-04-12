@@ -22,7 +22,7 @@ public class Solterona {
 
     Baraja baraja;
     int sizeBaraja;
-    List<Jugador> jugadores;
+    Lista<Jugador> jugadores;
     Jugador jugadorAnterior;
     Jugador jugadorActual;
     Random random = new Random();
@@ -36,7 +36,7 @@ public class Solterona {
      * @param baraja - Baraja con la que se jugará.
      */
 
-    public Solterona(List<Jugador> jugadores, Baraja baraja) {
+    public Solterona(Lista<Jugador> jugadores, Baraja baraja) {
         this.baraja = baraja;
         this.jugadores = jugadores;
         modoDeJuego();
@@ -72,14 +72,14 @@ public class Solterona {
     public void modoDeJuego() {
         if (jugadores.size() > 1 && jugadores.size() < 4) {
             for (int i = 0; i < 22; i++) {
-                baraja.remove(28);
+                baraja.delete(28);
             }
         } else if (jugadores.size() == 4) {
             for (int i = 0; i < 12; i++) {
-                baraja.remove(28);
+                baraja.delete(28);
             }
         }
-        baraja.remove(4);
+        baraja.delete(4);
         sizeBaraja = baraja.size();
         baraja.revolver();
     }
@@ -294,8 +294,8 @@ public class Solterona {
      * @return el número de pares en la mano.
      */
     public int paresMano(){
-        List<Carta> manoAux = jugadorActual.getMano();
-        List<String> valoresMano = new List<>();
+        Lista<Carta> manoAux = jugadorActual.getMano();
+        Lista<String> valoresMano = new Lista<>();
 
         for(int i = 0; i < manoAux.size(); i++){//Buscamos los valores en nuestra mano
             String valor = manoAux.get(i).getValor()+"";
