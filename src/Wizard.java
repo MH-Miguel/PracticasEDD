@@ -41,18 +41,7 @@ public class Wizard{
         this.baraja = baraja;
         this.jugadores = jugadores;
         this.numRondas = numRondas;
-        //this.jugadores.get(0).agregarCarta(this.baraja.tomarCarta());
-        for(int i=0; i<this.numRondas; i++){
-            baraja.revolver();
-            repartirBaraja(this.numRondas);
-            noBaza--;
-            
-            //System.out.println(this.jugadores.get(0).toString());
-            //System.out.println("Separar la info del primer jugador/n");
-
-            //la idea es que meter aquí el proceso de una ronda y que éste se repita
-            //el número de rondas totales.
-        }
+        juego();
     
     }
 
@@ -76,7 +65,18 @@ public class Wizard{
      * Método para la inicialización del juego.
      */
     public void juego(){
-        
+        //this.jugadores.get(0).agregarCarta(this.baraja.tomarCarta());
+        for(int i=0; i<this.numRondas; i++){
+            baraja.revolver();
+            repartirBaraja(this.numRondas);
+            noBaza--;
+            
+            //System.out.println(this.jugadores.get(0).toString());
+            //System.out.println("Separar la info del primer jugador/n");
+
+            //la idea es que meter aquí el proceso de una ronda y que éste se repita
+            //el número de rondas totales.
+        }
     }
 
 /**
