@@ -49,6 +49,13 @@ public class Jugador {
          return mano;
      }
 
+
+     //Metodo para que el jugador tire su carta a la mesa
+     public Carta jugarCarta(int indice){
+        Carta carta = (Carta) mano.remove(indice);
+        return carta;
+     }
+
     /**
      * Método para agregar una carta a la mano del jugador
      *

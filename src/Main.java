@@ -55,18 +55,32 @@ public class Main{
         switch (jugadores) 
         {
             case 3:  numRondas = 20;
-                     break;
+				Wizard wizard = new Wizard(jugadorList, baraja, numRondas);
+				for(int i = 0; i <= numRondas; i++){	
+				wizard.juego();
+				}  
+				break;
             case 4:  numRondas = 15;
-                     break;
+				Wizard wizard2 = new Wizard(jugadorList, baraja, numRondas);	
+				for(int i = 0; i <= numRondas; i++){	
+					wizard2.juego();
+				}
+                break;
             case 5: numRondas = 12;
-                     break;
+				Wizard wizard3 = new Wizard(jugadorList, baraja, numRondas);	
+				for(int i = 0; i <= numRondas; i++){	
+					wizard3.juego();
+				}
+
+				break;
             case 6: numRondas = 10;
-                     break;
+				Wizard wizard4 = new Wizard(jugadorList, baraja, numRondas);	
+				for(int i = 0; i <= numRondas; i++){	
+					wizard4.juego();
+				}
+
+                break;
         }
-
-
-
-		//Wizard wizard = new Wizard(jugadorList, baraja, numRondas);
 		
 
 
