@@ -21,13 +21,16 @@ public class Tupla {
         return this;
     }
 
+
+
     public int compareTo(Tupla tupla){
         if(this.fst().getValor() == 15 && tupla.fst().getValor() != 15){
             return 1;
         }
 
         if(this.fst().getValor() == 15 && tupla.fst().getValor() == 15){ //Cuando son 2 magos
-            throw new IllegalArgumentException("Acuerdate de implementar cuando se compara entre 2 magos");
+        return 2;
+            //throw new IllegalArgumentException("Acuerdate de implementar cuando se compara entre 2 magos");
         }
 
         if(this.fst().getValor() <= 13 && tupla.fst().getValor() <= 13){ //En el caso cuando se tiene un numero entre 0 y 13 y no hay magos ni bufones
