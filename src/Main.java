@@ -67,14 +67,8 @@ public class Main{
 
 
 		//Wizard wizard = new Wizard(jugadorList, baraja, numRondas);
+		
 
-
-
-
-
-
-		//Solterona solterona = new Solterona(jugadorList, baraja);
-		//solterona.juego();
 
 		repe = true;
 		System.out.println("¿Deseas saber el historial de la partida?\tSi/No");

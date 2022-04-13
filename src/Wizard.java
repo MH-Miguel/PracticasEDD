@@ -62,6 +62,21 @@ public class Wizard{
     }
 
     /**
+     * Método para hacer la apuesta
+     */
+    public void apuesta(int ronda){
+
+        for(int i=0; i <= ronda; i++){
+            int n = scanner.nextInt();
+            System.out.println("¿Cuántas manos crees que vas a ganar?\n "+n);
+            if(n>ronda){
+                System.out.println("Ingresa un número entre 0 y "+random"-_-"+reset);
+                return;
+            }
+        }
+    }
+
+    /**
      * Método para la inicialización del juego.
      */
     public void juego(){
