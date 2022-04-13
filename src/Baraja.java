@@ -46,6 +46,7 @@ public class Baraja{
         return (int) Math.round(Math.random() * max + 0.5);
     }
 
+    
     /**
      * Método para revolver las cartas de la baraja
      */
