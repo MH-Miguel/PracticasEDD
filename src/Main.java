@@ -28,7 +28,13 @@ public class Main{
 		System.out.println("\t*** BIENVENIDO AL JUEGO 'Wizard' ***\n");
 		System.out.println(baraja);
 
-		//System.out.println(baraja);
+
+		//Probe el funcionamiento de palo.
+		/**baraja.revolver();
+		Palo palo = new Palo(baraja.tomarCarta(), baraja.tomarCarta());
+		System.out.println(palo.toString()); 
+		*/
+
 		while(repe){
 			System.out.println("\nIngresa el número de jugadores que jugarán");
 			try{
@@ -49,7 +55,7 @@ public class Main{
 		for(int i = 0; i < jugadores; i++){
 			System.out.println("Ingresa el nombre del jugador " + (i+1));
 			String nombre = scanner.next();
-			jugadorList.add(jugadorList.size(), new Jugador(nombre, true, 0));
+			jugadorList.add(jugadorList.size(), new Jugador(nombre, true, 0,-1,0));
 		}
 
 		// instrucción switch para revisar cuantas rondas se jugarán

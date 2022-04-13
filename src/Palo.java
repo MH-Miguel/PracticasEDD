@@ -56,7 +56,7 @@ public class Palo{
 
     @Override
     public String toString() {
-        return "El palo de triunfo es: ";
+        return "El palo de triunfo es: "+ this.triunfo.obtenerNombreFigura()+ "\nEl palo lider es: "+this.lider.obtenerNombreFigura();
     }
 
 

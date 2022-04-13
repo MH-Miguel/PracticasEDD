@@ -10,6 +10,8 @@ public class Jugador {
     protected Lista<Carta> mano;
     protected boolean persona;
     public int puntuacion;
+    public int apuesta;
+    public int trucosW;
 
     /**
      * Constructor que crea un objeto de tipo jugador
@@ -17,11 +19,13 @@ public class Jugador {
      * @param nombre - string con el nombre del jugador
      * @param persona - boolean que dice si es persona o no
      */
-    public Jugador(String nombre, boolean persona, int puntuacion) {
+    public Jugador(String nombre, boolean persona, int puntuacion, int apuesta, int trucosW) {
        this.nombre = nombre;
        mano = new Lista<>();
        this.persona = persona;
        this.puntuacion=puntuacion;
+       this.apuesta=apuesta;
+       this.trucosW=trucosW;
     }
 
     /**
@@ -41,6 +45,24 @@ public class Jugador {
       return this.puntuacion;
    }
 
+   /**
+     * Método para obtener la puntuación del jugador
+     *
+     * @return int con la apuesta del jugador
+     */
+    public int getApuesta() {
+      return this.apuesta;
+   }
+
+   /**
+     * Método para obtener la puntuación del jugador
+     *
+     * @return int con trucos ganados del jugador
+     */
+    public int getTrucosW() {
+      return this.trucosW;
+   }
+
      /**
       * Metodo que regresa la mano del jugador
       * @return mano del jugador
@@ -48,6 +70,43 @@ public class Jugador {
     public Lista<Carta> getMano() {
          return mano;
      }
+
+   /**
+     * Método para modificar el valor de la apuesta del jugador
+     * @param apuesta  apuesta del jugador
+     */
+    public void setApuesta (int apuesta){
+      this.apuesta = apuesta;
+  }  
+
+  /**
+     * Método para modificar el valor de los trucos ganados del jugador
+     * @param trucosW trucos que gano el jugador.
+     */
+    public void setTrucosW(int trucosW){
+      this.trucosW = trucosW;
+  }  
+
+  /**
+   * Método para sumar 1 a los trucos ganados del jugador.
+   */
+  public void ganarTruco(){
+     this.trucosW=this.trucosW+1;
+  }
+
+  /**
+   * Método reiniciar a 0 los trucos ganados del jugador.
+   */
+  public void reiniciarTrucosW(){
+   this.trucosW=0;
+}
+
+   /**
+   * Método para reiniciar la apuesta del jugador.
+   */
+  public void reiniciarApuesta(){
+   this.apuesta=-1;
+}
 
 
      //Metodo para que el jugador tire su carta a la mesa
@@ -111,7 +170,7 @@ public class Jugador {
      * @return Cadena con toda la información de jugador
      */
     public String toString() {
-       return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion +"\nMano: " + this.getMano();
+       return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion + "\nTrucos ganados: "+this.trucosW+ "\nApuesta: "+this.apuesta+ "\nMano: " + this.getMano();
     }
 
     public String printDeck(){
