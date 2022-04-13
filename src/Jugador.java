@@ -85,7 +85,23 @@ public class Jugador {
      */
     public void setTrucosW(int trucosW){
       this.trucosW = trucosW;
+  }
+  
+  /**
+     * Método para modificar la puntuacion del jugador
+     * @param puntuacion puntuacion del jugador .
+     */
+    public void setPuntuacion(int puntuacion){
+      this.puntuacion=puntuacion;
   }  
+
+  /**
+     * Método para sumar  puntuacion al jugador
+     * @param puntuacion puntuacion del jugador .
+     */
+    public void sumarPuntuacion(int puntuacion){
+      this.puntuacion=this.puntuacion+puntuacion;
+  } 
 
   /**
    * Método para sumar 1 a los trucos ganados del jugador.
