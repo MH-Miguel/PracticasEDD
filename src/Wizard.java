@@ -79,7 +79,7 @@ public class Wizard{
             System.out.println(lista.get(i) + "\n ¿Cuántas manos crees que vas a ganar?\n ");
             int n = scanner.nextInt();
 
-            //Guardar la apuesta en el atributo apuesta del jugador i.
+            
             if(n>ronda){
                 System.out.println("Ingresa un número entre 0 y "+random + "-_-"+reset);
                 return;
