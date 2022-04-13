@@ -39,6 +39,14 @@ public class Palo{
     }
 
     /**
+     * Método para obtener el número de la carta triunfo
+     * @return valor del numero de la carta
+     */
+    public int getIntTriunfo(){
+        return this.triunfo.getValor();
+    }
+
+    /**
      * Método para modificar el valor del palo de triunfo
      * @param triunfo  carta que define el palo de triunfo
      */
@@ -52,6 +60,14 @@ public class Palo{
      */
     public String getValorLider(){
         return this.lider.obtenerNombreFigura();
+    }
+
+    /**
+     * Método para obtener el número de la carta lider
+     * @return valor del numero de la carta
+     */
+    public int getIntLider(){
+        return this.lider.getValor();
     }
 
      

@@ -78,7 +78,6 @@ public class Wizard{
             //Mostrar mano del jugador i(ya la muestra)
 
             //Mostrar cual es el palo de triunfo y el palo lider (hacer toString de Palo)
-            t.setTriunfo(baraja.tomarCarta());
             System.out.println(t.toString());
 
             System.out.println(lista.get(i) + "\nIngresa tu predicción: ");
@@ -173,6 +172,21 @@ public class Wizard{
 
             //Sacar el palo de triunfo y guardarlo en Palo, Recuerda que si i=this.numRondas, ya no
             //hacemos este paso.
+            if(i==this.numRondas){
+                t.setTriunfo(null);
+            }else{
+                t.setTriunfo(baraja.tomarCarta());
+                if(t.getIntTriunfo()==15){
+                    //Preguntar al usuario que revolvió que palo quiere que sea el de triunfo y asignarlo
+                    System.out.println("Se sacó una carta para conocer el palo de triunfo pero salió mago, escribe que color quieres que sea el palo de triuunfo:  ");
+			        String paloTriunfoString = scanner.next();
+                    Carta cartaTriunfo= new Carta(1, paloTriunfoString);
+                    t.setTriunfo(cartaTriunfo);
+                }else if(t.getIntTriunfo()==14){
+                    t.setTriunfo(null);
+                }
+
+            }
 
             repartirBaraja(i);
 
