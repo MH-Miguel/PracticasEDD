@@ -46,18 +46,19 @@ public class Wizard{
         this.baraja = baraja;
         this.jugadores = jugadores;
         this.numRondas = numRondas;
-        juego();
+        //juego();
     }
 
 
     /**
      * Método para repartirle las cartas a cada jugador.
+     * @param noCartas Cuantas cartas se reparten a cada jugador. 
      */
-    public void repartirBaraja(int noBaza) {
+    public void repartirBaraja(int noCartas) {
         int jugadores = this.jugadores.size();
         int j=0;
         while( j < jugadores){
-            for(int k=this.numRondas; k >= noBaza; k--){
+            for(int k=1; k <= noCartas; k++){
                 this.jugadores.get(j).agregarCarta(this.baraja.tomarCarta());
             }
             j++;
@@ -125,7 +126,7 @@ public class Wizard{
         //this.jugadores.get(0).agregarCarta(this.baraja.tomarCarta());
         for(int i=1; i<=this.numRondas; i++){
             baraja.revolver();
-            repartirBaraja(this.numRondas);
+            repartirBaraja(i);
 
             apuesta(this.numRondas);
 
