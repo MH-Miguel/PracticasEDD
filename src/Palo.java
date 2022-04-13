@@ -22,21 +22,37 @@ public class Palo{
     }
 
     /**
-    * Método para obtener el palo de la carta triunfo
-    * @return valor del palo
-    */
+     * Método para obtener el palo de la carta triunfo
+     * @return valor del palo
+     */
     public String getValorTriunfo(){
         return this.triunfo.obtenerNombreFigura();
     }
 
     /**
-    * Método para obtener el palo de la carta lider
-    * @return valor del palo
-    */
+     * Método para modificar el valor del palo de triunfo
+     * @param triunfo  carta que define el palo de triunfo
+     */
+    public void setTriunfo (Carta triunfo){
+        this.triunfo = triunfo;
+    }
+
+    /**
+     * Método para obtener el palo de la carta lider
+     * @return valor del palo
+     */
     public String getValorLider(){
         return this.lider.obtenerNombreFigura();
-     }
+    }
 
+     
+    /**
+     * Método para modificar el valor del palo de triunfo
+     * @param triunfo  carta que define el palo de triunfo
+     */
+    public void setLider (Carta lider){
+        this.lider = lider;
+    }
 
 
 }
