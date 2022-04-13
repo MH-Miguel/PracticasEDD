@@ -23,6 +23,7 @@ public class Main{
 		boolean repe = true;
 		int numRondas=0;
 
+	
 
 		System.out.println("\t*** BIENVENIDO AL JUEGO 'Wizard' ***\n");
 		System.out.println(baraja);

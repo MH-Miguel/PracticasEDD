@@ -91,6 +91,7 @@ public class Wizard{
             }
         }
 
+        
 
         System.out.println(rondaTruco);
 
@@ -100,6 +101,7 @@ public class Wizard{
         rondaTruco.add(1,temp); // indice n+1
 
         System.out.println(rondaTruco);
+
 
         /*
 

@@ -2,6 +2,7 @@ public class Tupla {
 
     Carta carta;
     Jugador jugador;
+    
 
     public Tupla(Carta carta, Jugador jugador){
         this.carta = carta;
@@ -24,6 +25,7 @@ public class Tupla {
         if(this.fst().getValor() == 15 && tupla.fst().getValor() != 15){
             return 1;
         }
+
         if(this.fst().getValor() == 15 && tupla.fst().getValor() == 15){ //Cuando son 2 magos
             throw new IllegalArgumentException("Acuerdate de implementar cuando se compara entre 2 magos");
         }
