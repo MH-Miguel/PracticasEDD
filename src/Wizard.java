@@ -41,44 +41,19 @@ public class Wizard{
         this.baraja = baraja;
         this.jugadores = jugadores;
         this.numRondas = numRondas;
-
+        //this.jugadores.get(0).agregarCarta(this.baraja.tomarCarta());
         for(int i=0; i<this.numRondas; i++){
             baraja.revolver();
-            repartirBaraja(noBaza);
+            repartirBaraja(this.numRondas);
             noBaza--;
+            
+            //System.out.println(this.jugadores.get(0).toString());
+            //System.out.println("Separar la info del primer jugador/n");
 
             //la idea es que meter aquí el proceso de una ronda y que éste se repita
             //el número de rondas totales.
         }
-        
-        modoDeJuego();
-        noBaza--;
-        numTurno = random.nextInt(jugadores.size() - 1);
-        jugadorActual = jugadores.get(numTurno);
-        if(numTurno == 0){
-            jugadorAnterior = jugadores.get((jugadores.size()-1));
-        }else{
-            jugadorAnterior = jugadores.get(numTurno-1);
-        }
-    }
-
-
-    /**
-     * Método para revolver y modificar el tamaño de la baraja.
-     */
-    public void modoDeJuego(){
-        if (jugadores.size() > 1 && jugadores.size() < 4) {
-            for (int i = 0; i < 22; i++) {
-                baraja.delete(28);
-            }
-        } else if (jugadores.size() == 4) {
-            for (int i = 0; i < 12; i++) {
-                baraja.delete(28);
-            }
-        }
-        baraja.delete(4);
-        sizeBaraja = baraja.size();
-        baraja.revolver();
+    
     }
 
 
@@ -89,11 +64,19 @@ public class Wizard{
         int jugadores = this.jugadores.size();
         int j=0;
         while( j < jugadores){
-            for(int i=this.numRondas; i<=noBaza; i--){
-                this.jugadores.get(j).agregarCarta(baraja.tomarCarta());
+            
+            for(int k=this.numRondas; k>=noBaza; k--){
+                this.jugadores.get(j).agregarCarta(this.baraja.tomarCarta());
             }
             j++;
         }
+    }
+
+    /**
+     * Método para la inicialización del juego.
+     */
+    public void juego(){
+        
     }
 
 /**

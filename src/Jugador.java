@@ -104,7 +104,7 @@ public class Jugador {
      * @return Cadena con toda la información de jugador
      */
     public String toString() {
-       return "\nNombre: " + this.nombre +"Puntuación: "+this.puntuacion +"\nMano: " + this.getMano();
+       return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion +"\nMano: " + this.getMano();
     }
 
     public String printDeck(){
