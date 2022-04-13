@@ -47,6 +47,8 @@ public class Tupla {
         return -1; //Se llega a este caso cuando el jugador que manda a llamar el metodo tiene el bufon y los otros no lo tienen
     }
 
+    //Crear metodo para borrar todos los elementos de la lista 
+
     @Override
     public String toString() {
         return "(" + "carta=" + carta + ", jugador=" + jugador.getNombre() + ')';

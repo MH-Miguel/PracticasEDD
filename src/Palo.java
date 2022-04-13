@@ -54,5 +54,10 @@ public class Palo{
         this.lider = lider;
     }
 
+    @Override
+    public String toString() {
+        return "El palo de triunfo es: ";
+    }
+
 
 }
