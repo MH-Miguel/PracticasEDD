@@ -30,7 +30,9 @@ public class Wizard{
     Scanner scanner2 = new Scanner(System.in);
     int numTurno;
     int numRondas;
+    Palo t = new Palo();
     int noBaza=this.numRondas;
+    Carta v = new Carta();
 
     public Lista<Jugador> getJugadores() {
         return jugadores;
@@ -47,6 +49,7 @@ public class Wizard{
         this.jugadores = jugadores;
         this.numRondas = numRondas;
         //juego();
+        
     }
 
 
@@ -72,19 +75,23 @@ public class Wizard{
         Lista<Jugador> lista = getJugadores();
         for(int i=0; i < jugadores.size(); i++){
 
-            //Mostrar mano del jugador i
+            //Mostrar mano del jugador i(ya la muestra)
 
             //Mostrar cual es el palo de triunfo y el palo lider (hacer toString de Palo)
+            t.setTriunfo(baraja.tomarCarta());
+            System.out.println(t.toString());
 
-            System.out.println(lista.get(i) + "\n ¿Cuántas manos crees que vas a ganar?\n ");
+            System.out.println(lista.get(i) + "\nIngresa tu predicción: \n ");
             int n = scanner.nextInt();
-
             
             if(n>ronda){
                 System.out.println("Ingresa un número entre 0 y "+random + "-_-"+reset);
-                return;
             }
+            lista.get(i).setApuesta(n);
+
+
             //Guardar la apuesta en el atributo apuesta del jugador i.
+            
         }
     }
 
