@@ -21,6 +21,15 @@ public class Palo{
         this.lider=lider;
     }
 
+    public Carta getTriunfo(){
+
+        return this.triunfo;
+    }
+    public Carta getLider(){
+
+        return this.lider;
+    }
+
     /**
      * Método para obtener el palo de la carta triunfo
      * @return valor del palo
