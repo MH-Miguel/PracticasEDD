@@ -23,9 +23,7 @@ public class Carta{
    public final String[] figuras = new String[]{null, "amarillo", "rojo", "azul", "verde", "mago", "bufon"};
    public final String[] dibujos = new String[]{null, yellow+" φ "+reset, red+" ψ "+reset, blue+" τ "+reset, green+" ξ "+reset, white+"  "+reset, mag+"  "+reset};
    public final String[] valores = new String[]{null, "1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", " 10", " 11", " 12", " 13", "B", "M"};
-   /*public final String[] figuras2 = new String[]{null, "mago", "bufon"};
-   public final String[] dibujos2 = new String[]{null, white+" Z "+reset, white+" N "+reset};
-   public final String[] valores2 = new String[]{null, " 0", " 0", " 0", " 0"};*/
+   
    /**
     * Constructor para crear una carta a partir de un entero y un string
     * @param var1 - int para el valor de la carta

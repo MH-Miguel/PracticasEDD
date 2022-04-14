@@ -131,7 +131,7 @@ public class Wizard{
                             max=l;
                         }
                     }
-                    System.out.println("Comparando el Maximo "+max);
+                    //System.out.println("Comparando el Maximo "+max);
                 
             }
            
@@ -146,7 +146,7 @@ public class Wizard{
                
                 for(int m=0;m<jugadores.size();m=m+1){
                     //    System.out.println("max= "+max);
-                    System.out.println("SAle de for "+jugadores.size());
+                    //System.out.println("SAle de for "+jugadores.size());
                         apoyo.add(m,jugadores.get((max+m)%(jugadores.size())));
                     }
 
