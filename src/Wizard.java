@@ -1,6 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.lang.model.element.NestingKind;
+
 import java.lang.NumberFormatException;
 import java.lang.IndexOutOfBoundsException;
 import java.lang.NullPointerException;
@@ -111,39 +113,62 @@ public class Wizard{
                 //if revisar si el palo.getLider es vacio, dentro de este if meter                 
                 // if el valor de la carta va de 1 al 13, añadir set lider al Palo.
                 if(t.getValorLider()==null){
+                    if(t.getTriunfo().getValor()>=1 & t.getTriunfo().getValor()<=13)
                     t.setLider(t.getTriunfo());
-                }else{
-                    t.setLider(jugadores.get().getMano().get(jugadores.get(0).trucosW));
                 }
-
                 rondaTruco.add(0,new Tupla(jugadores.get(j).jugarCarta(index),jugadores.get(j))); //Agregará a una lista donde se mete la carta que jugó cada jugador
             }
 
             //Agregar el compareTo de cada elemento de la lista rondaTruco, recuerda respetar el orden.
-            for(int l=0;l<jugadores.size();l++){
+            int max=0;
+            for(int l=1;l<jugadores.size();l++){
 
-
+                if(rondaTruco.get(l).compareTo(rondaTruco.get(max))==1){
+                        max=l;   
+                }
+                    if(rondaTruco.get(l).compareTo(rondaTruco.get(max))==2){
+                        if(l<max){
+                            max=l;
+                        }
+                    }
+                    System.out.println("Comparando el Maximo "+max);
+                
             }
-
+           
 
             //La carta que ganó, a su dueño le vas a sumar 1 a su atributo trucosW
-
+                jugadores.get(max).setTrucosW(jugadores.get(max).getTrucosW()+1);
             //De algun modo indicar que el que gano la ronda iniciara la siguiente 
+                int o=0;
+                Lista<Jugador> apoyo=new Lista<>();
+                
 
+                for(int m=0;m<3;m=m+1){
+                //    System.out.println("max= "+max);
+                
+                //System.out.println("SAle de for"+jugadores.size());
+
+                    apoyo.add(o,jugadores.get(m));
+                    System.out.println("Jugador xxxxxx"+jugadores.get(m));
+                    o++;
+                }
+                
+                
             //Borrar los elementos de  la lista Tupla rondaTruco.
+                    //rondaTruco.clear();
 
         }
 
         
 
-        System.out.println(rondaTruco);
+        //System.out.println(rondaTruco);
 
-        System.out.println(rondaTruco.get(0).compareTo(rondaTruco.get(1)));
+        //System.out.println(rondaTruco.get(0).compareTo(rondaTruco.get(1)));
 
-        Tupla temp = rondaTruco.remove(0); // indice n
-        rondaTruco.add(1,temp); // indice n+1
+        //Tupla temp = rondaTruco.remove(0); // indice n
+        //rondaTruco.add(1,temp); // indice n+1
 
-        System.out.println(rondaTruco);
+        //System.out.println(rondaTruco);
 
 
         /*
@@ -155,7 +180,7 @@ public class Wizard{
          */
 
 
-        System.out.println("Termino de ronda" + numRonda);
+        System.out.println("Termino de ronda " + numRonda);
         //int x = scanner.nextInt();
     }
 
