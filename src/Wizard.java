@@ -226,15 +226,15 @@ public class Wizard{
 
             //Resetear la apuesta y trucosW de cada jugador para preparar la siguiente ronda.
             for(int j=0; j < jugadores.size(); j++){
-                this.jugadores.get(i).reiniciarTrucosW();
-                this.jugadores.get(i).reiniciarApuesta();
+                this.jugadores.get(j).reiniciarTrucosW();
+                this.jugadores.get(j).reiniciarApuesta();
             }
 
 
 
             //Final de la ronda mostrar los resultados hasta el momento.
             for(int j=0; j < jugadores.size(); j++){
-                this.jugadores.get(j).consultarPuntuacion();
+                System.out.println("\n"+this.jugadores.get(j).consultarPuntuacion());
             }
             
             //System.out.println(this.jugadores.get(0).toString());
