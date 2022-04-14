@@ -21,6 +21,11 @@ public class Tupla {
         return this;
     }
 
+    public void clear(){
+        this.carta=null;
+        this.jugador=null;
+    }
+
 
 
     public int compareTo(Tupla tupla){

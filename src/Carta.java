@@ -39,6 +39,7 @@ public class Carta{
    }
    public Carta() {}
 
+
    /**
     * Método para obtener la figura de la carta como string
     * @return figura de la carta

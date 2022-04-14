@@ -35,6 +35,10 @@ public class Wizard{
     Palo t = new Palo();
     int noBaza=this.numRondas;
     Carta v = new Carta();
+    Carta aux = new Carta();
+    
+
+
 
     public Lista<Jugador> getJugadores() {
         return jugadores;
@@ -103,7 +107,9 @@ public class Wizard{
         for(int i = 1; i <= numRonda; i++){ //Numero de trucos de la ronda en curso
             System.out.println("Truco; "+ i +  " Ronda: " + numRonda);
             for(int j = 0; j < jugadores.size(); j++){ //Cada jugador juegue su carta
-                //Mostrarle la mano al jugador(j) con respectivos indices de su mano.
+                //Mostrar el palo lider y palo de triunfo
+                System.out.println(t.toString());
+                //Mostrarle la mano al jugador(j) con respectivos indices de su mano
                 System.out.println(jugadores.get(j) + "\n Ingresa el indice de la carta: \n");
                 for(int k=0;k<numRonda-i+1;k++){
                     System.out.println("        ["+k+"].........."+jugadores.get(j).getMano().get(k));
@@ -155,7 +161,10 @@ public class Wizard{
                 jugadores=apoyo;
                 
             //Borrar los elementos de  la lista Tupla rondaTruco.
-                    //rondaTruco.clear();
+            //rondaTruco.clear();
+            //Borro el registro del palo de triunfo y lider
+            //t.setTriunfo(aux);
+            //t.setLider(aux);     
 
         }
 
@@ -224,17 +233,16 @@ public class Wizard{
             calcularPuntos();
 
 
-            //Resetear la apuesta y trucosW de cada jugador para preparar la siguiente ronda.
-            for(int j=0; j < jugadores.size(); j++){
-                this.jugadores.get(j).reiniciarTrucosW();
-                this.jugadores.get(j).reiniciarApuesta();
-            }
-
-
 
             //Final de la ronda mostrar los resultados hasta el momento.
             for(int j=0; j < jugadores.size(); j++){
                 System.out.println("\n"+this.jugadores.get(j).consultarPuntuacion());
+            }
+
+            //Resetear la apuesta y trucosW de cada jugador para preparar la siguiente ronda.
+            for(int j=0; j < jugadores.size(); j++){
+                this.jugadores.get(j).reiniciarTrucosW();
+                this.jugadores.get(j).reiniciarApuesta();
             }
             
             //System.out.println(this.jugadores.get(0).toString());

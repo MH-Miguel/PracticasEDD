@@ -186,7 +186,7 @@ public class Jugador {
      * @return Cadena con las puntuaciones de cada jugador
      */
     public String consultarPuntuacion() {
-      return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion;
+      return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion + "\nTrucos ganados: "+this.trucosW+ "\nApuesta: "+this.apuesta;
    }
 
     /**
