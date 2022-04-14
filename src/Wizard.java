@@ -143,16 +143,16 @@ public class Wizard{
                 Lista<Jugador> apoyo=new Lista<>();
                 
 
-                for(int m=0;m<3;m=m+1){
-                //    System.out.println("max= "+max);
-                
-                //System.out.println("SAle de for"+jugadores.size());
+               
+                for(int m=0;m<jugadores.size();m=m+1){
+                    //    System.out.println("max= "+max);
+                    System.out.println("SAle de for "+jugadores.size());
+                        apoyo.add(m,jugadores.get((max+m)%(jugadores.size())));
+                    }
 
-                    apoyo.add(o,jugadores.get(m));
-                    System.out.println("Jugador xxxxxx"+jugadores.get(m));
-                    o++;
-                }
                 
+                
+                jugadores=apoyo;
                 
             //Borrar los elementos de  la lista Tupla rondaTruco.
                     //rondaTruco.clear();
