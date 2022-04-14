@@ -196,18 +196,47 @@ public class Wizard{
 
             //Hacer cuentas para sumar o restar puntos a la puntuación de cada jugador con respecto
             //a si concuerda el numpero de trucosW y su apuesta. Podemos crear un método que haga ésto
+            calcularPuntos();
 
 
             //Resetear la apuesta y trucosW de cada jugador para preparar la siguiente ronda.
+            for(int j=0; j < jugadores.size(); j++){
+                this.jugadores.get(i).reiniciarTrucosW();
+                this.jugadores.get(i).reiniciarApuesta();
+            }
 
 
-            noBaza--; //Final de la ronda
+
+            //Final de la ronda mostrar los resultados hasta el momento.
+            for(int j=0; j < jugadores.size(); j++){
+                this.jugadores.get(j).consultarPuntuacion();
+            }
             
             //System.out.println(this.jugadores.get(0).toString());
             //System.out.println("Separar la info del primer jugador/n");
 
             //la idea es que meter aquí el proceso de una ronda y que éste se repita
             //el número de rondas totales.
+        }
+    }
+
+    public void calcularPuntos(){
+
+        for(int i=0; i < jugadores.size(); i++){
+
+            int comparacion= this.jugadores.get(i).getApuesta()-this.jugadores.get(i).getTrucosW();
+            if(comparacion<0){
+                comparacion=-1*comparacion;
+            }
+    
+            if(comparacion==0){
+                int puntuacion= 20 + (10*this.jugadores.get(i).getTrucosW());
+    
+                this.jugadores.get(i).sumarPuntuacion(puntuacion);
+            }else{
+                int puntuacion=-10 * comparacion;
+                this.jugadores.get(i).sumarPuntuacion(puntuacion);
+            }
         }
     }
 

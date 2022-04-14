@@ -181,6 +181,15 @@ public class Jugador {
     }
 
     /**
+     * Método para imprimir en consola al jugador y su puntuacion
+     *
+     * @return Cadena con las puntuaciones de cada jugador
+     */
+    public String consultarPuntuacion() {
+      return "\nNombre: " + this.nombre +"\nPuntuación: "+this.puntuacion;
+   }
+
+    /**
      * Método para imprimir en consola el jugador y sus atributos
      *
      * @return Cadena con toda la información de jugador
